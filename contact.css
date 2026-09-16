@@ -258,6 +258,11 @@ html[data-theme="dark"] .ci-card--loc .ci-card-icon {
   transform: translateY(-2px);
 }
 
+.ci-soc.wa {
+  color: #25d366;
+  border-color: #bbf7d0;
+}
+
 .ci-soc.wa:hover {
   background: #25d366;
   color: #fff;
