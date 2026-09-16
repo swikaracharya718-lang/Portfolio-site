@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sign in to Swikar Acharya's website.">
+  <title>Sign in | Swikar Acharya</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="login-page">
+  <button class="theme-toggle auth-theme-toggle" type="button" aria-label="Switch theme" aria-pressed="true">☀</button>
+  <main class="login-container">
+    <section class="login-form" aria-labelledby="sign-in-title">
+      <a class="back-link" href="index.html">← Back to home</a>
+
+      <div class="login-heading">
+        <p class="eyebrow">WELCOME BACK</p>
+        <h1 id="sign-in-title" class="title">Sign in to your account</h1>
+        <p class="subtitle">Enter your details below to continue.</p>
+      </div>
+
+      <form>
+        <div class="form-field">
+          <label for="email">Email address</label>
+          <input id="email" name="email" type="email" placeholder="you@example.com" autocomplete="email" required>
+        </div>
+
+        <div class="form-field">
+          <div class="field-label-row">
+            <label for="password">Password</label>
+            <a href="#forgot-password">Forgot password?</a>
+          </div>
+          <input id="password" name="password" type="password" placeholder="Enter your password" autocomplete="current-password" required>
+        </div>
+
+        <label class="remember-me">
+          <input type="checkbox" name="remember">
+          <span>Remember me for 30 days</span>
+        </label>
+
+        <button type="submit" class="btnprimary-btn">Sign in</button>
+      </form>
+
+      <div class="divider" aria-hidden="true"><span>or</span></div>
+
+      <button type="button" class="btngoogle-btn">
+        <img src="https://www.svgrepo.com/show/475656/google-color.svg" alt="" width="20" height="20">
+        Continue with Google
+      </button>
+
+      <p class="footer-text">Don&rsquo;t have an account? <a href="signup.html">Create one</a></p>
+    </section>
+  </main>
+  <script src="theme.js"></script>
+</body>
+</html>
