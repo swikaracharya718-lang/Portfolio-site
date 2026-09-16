@@ -49,60 +49,89 @@
   </header>
 
   <main class="contact-page">
+    <div class="contact-container">
 
-    <!-- Hero -->
-    <section class="contact-hero">
-      <div class="contact-hero-inner">
-        <p class="hero-eyebrow">GET IN TOUCH</p>
-        <h1>Let&rsquo;s Work Together</h1>
-        <p class="contact-hero-sub">Have a project in mind? I&rsquo;d love to hear about it. Fill out the form or reach me directly.</p>
-      </div>
-    </section>
+      <!-- LEFT INFO PANEL -->
+      <aside class="ci-panel">
+        <div class="ci-badge">
+          <span class="modal-status-dot"></span>
+          <span>Available for Work</span>
+        </div>
 
-    <!-- Content -->
-    <section class="contact-main">
-      <div class="contact-layout">
+        <h1>Get In Touch</h1>
+        <p class="ci-desc">Have a project in mind or just want to say hi? I&rsquo;d love to hear from you. Fill out the form or reach me directly below.</p>
 
-        <!-- Left info panel -->
-        <aside class="contact-info">
-          <div class="contact-info-top">
-            <span class="modal-status-dot"></span>
-            <span class="contact-avail">Available for Work</span>
-          </div>
+        <!-- Contact cards -->
+        <div class="ci-cards">
 
-          <h2>Got a project<br>in mind?</h2>
-          <p>Fill out the form or reach me directly &mdash; I usually respond within 24 hours.</p>
-
-          <div class="contact-divider"></div>
-
-          <a href="mailto:swikaracharya718@gmail.com" class="contact-direct-link">
-            <span class="contact-direct-icon">
+          <a href="mailto:swikaracharya718@gmail.com" class="ci-card">
+            <div class="ci-card-icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-            </span>
-            swikaracharya718@gmail.com
+            </div>
+            <div class="ci-card-text">
+              <span class="ci-card-label">Email</span>
+              <span class="ci-card-value">swikaracharya718@gmail.com</span>
+            </div>
           </a>
 
-          <div class="contact-socials">
-            <a href="https://wa.me/9779842243576" target="_blank" rel="noopener" class="contact-social-btn wa">
+          <a href="https://wa.me/9779842243576" target="_blank" rel="noopener" class="ci-card ci-card--wa">
+            <div class="ci-card-icon">
               <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
-              WhatsApp
-            </a>
-            <a href="https://www.instagram.com/swikaracharya17/" target="_blank" rel="noopener" class="contact-social-btn ig">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
-              Instagram
-            </a>
-            <a href="https://www.facebook.com/swikar.acharya2" target="_blank" rel="noopener" class="contact-social-btn fb">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
-              Facebook
-            </a>
-          </div>
-        </aside>
+            </div>
+            <div class="ci-card-text">
+              <span class="ci-card-label">WhatsApp — tap to message or call</span>
+              <span class="ci-card-value">+977 9842243576</span>
+            </div>
+            <span class="ci-card-arrow">&rarr;</span>
+          </a>
 
-        <!-- Right form -->
+          <a href="tel:+9779842243576" class="ci-card ci-card--phone">
+            <div class="ci-card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.4 2 2 0 0 1 3.6 1.22h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.82a16 16 0 0 0 6.29 6.29l.96-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </div>
+            <div class="ci-card-text">
+              <span class="ci-card-label">Phone — tap to call directly</span>
+              <span class="ci-card-value">+977 9842243576</span>
+            </div>
+            <span class="ci-card-arrow">&rarr;</span>
+          </a>
+
+          <div class="ci-card ci-card--loc">
+            <div class="ci-card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div class="ci-card-text">
+              <span class="ci-card-label">Location</span>
+              <span class="ci-card-value">Kathmandu, Nepal</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Social row -->
+        <div class="ci-social-row">
+          <a href="https://wa.me/9779842243576" target="_blank" rel="noopener" class="ci-soc wa" aria-label="WhatsApp">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/swikaracharya17/" target="_blank" rel="noopener" class="ci-soc ig" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+          </a>
+          <a href="https://www.facebook.com/swikar.acharya2" target="_blank" rel="noopener" class="ci-soc fb" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/YOUR_USERNAME" target="_blank" rel="noopener" class="ci-soc li" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+        </div>
+      </aside>
+
+      <!-- RIGHT FORM PANEL -->
+      <div class="cf-panel">
         <form class="contact-form" id="contactForm" action="https://formspree.io/f/maenwplw" method="POST" novalidate>
+
           <div class="cf-row">
             <div class="cf-field">
-              <label for="cf-name">Your Name <span class="req">*</span></label>
+              <label for="cf-name">Full Name <span class="req">*</span></label>
               <input type="text" id="cf-name" name="name" placeholder="John Doe" required>
             </div>
             <div class="cf-field">
@@ -110,6 +139,7 @@
               <input type="email" id="cf-email" name="email" placeholder="you@example.com" required>
             </div>
           </div>
+
           <div class="cf-row">
             <div class="cf-field">
               <label for="cf-phone">Phone Number <span class="req">*</span></label>
@@ -128,21 +158,27 @@
               </div>
             </div>
           </div>
+
           <div class="cf-field">
             <label for="cf-subject">Subject <span class="req">*</span></label>
             <input type="text" id="cf-subject" name="subject" placeholder="Project idea, collaboration..." required>
           </div>
+
           <div class="cf-field">
             <label for="cf-message">Message <span class="req">*</span></label>
             <textarea id="cf-message" name="message" rows="7" placeholder="Tell me about your project or idea..." required></textarea>
           </div>
-          <button type="submit" class="cf-submit" id="submitBtn">Send Message <span aria-hidden="true">&rarr;</span></button>
+
+          <button type="submit" class="cf-submit" id="submitBtn">
+            Send Message
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2 11 13"/><path d="M22 2 15 22 11 13 2 9l20-7z"/></svg>
+          </button>
           <p class="cf-success" id="formSuccess" aria-live="polite"></p>
+
         </form>
-
       </div>
-    </section>
 
+    </div>
   </main>
 
   <script src="theme.js"></script>
@@ -172,7 +208,7 @@
       }
 
       submitBtn.disabled = false;
-      submitBtn.innerHTML = 'Send Message <span aria-hidden="true">&rarr;</span>';
+      submitBtn.innerHTML = 'Send Message <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2 11 13"/><path d="M22 2 15 22 11 13 2 9l20-7z"/></svg>';
       setTimeout(() => { success.textContent = ''; }, 6000);
     });
   </script>
