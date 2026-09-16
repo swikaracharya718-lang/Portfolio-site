@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume — Swikar Acharya</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: Poppins, sans-serif;
+      background: #f1f5f9;
+      color: #1e293b;
+      min-height: 100vh;
+      padding: 2rem 1rem;
+    }
+
+    /* Print button */
+    .print-bar {
+      max-width: 900px;
+      margin: 0 auto 1.25rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .print-bar a {
+      color: #4f46e5;
+      font: 500 0.85rem Poppins, sans-serif;
+      text-decoration: none;
+    }
+
+    .print-bar a:hover { text-decoration: underline; }
+
+    .btn-print {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.6rem 1.25rem;
+      background: #4f46e5;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font: 600 0.85rem Poppins, sans-serif;
+      cursor: pointer;
+      transition: background 0.2s ease;
+    }
+
+    .btn-print:hover { background: #4338ca; }
+    .btn-print svg { width: 1rem; height: 1rem; }
+
+    /* Resume card */
+    .resume {
+      max-width: 900px;
+      margin: 0 auto;
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 8px 40px rgba(15,23,42,0.12);
+      overflow: hidden;
+    }
+
+    /* ── Header ── */
+    .r-header {
+      background: linear-gradient(135deg, #1e1b4b 0%, #312e81 50%, #4f46e5 100%);
+      padding: 2.75rem 3rem;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 2rem;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .r-header::before {
+      content: '';
+      position: absolute;
+      width: 300px; height: 300px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.05);
+      top: -100px; right: -60px;
+      pointer-events: none;
+    }
+
+    .r-name {
+      font: 700 2.4rem/1.1 Poppins, sans-serif;
+      color: #fff;
+      letter-spacing: -0.04em;
+    }
+
+    .r-title {
+      margin-top: 0.4rem;
+      font: 500 1rem Poppins, sans-serif;
+      color: #a5b4fc;
+      letter-spacing: 0.02em;
+    }
+
+    .r-contact-list {
+      margin-top: 1.25rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem 1.5rem;
+      list-style: none;
+    }
+
+    .r-contact-list li {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      font: 400 0.8rem Poppins, sans-serif;
+      color: rgba(255,255,255,0.82);
+    }
+
+    .r-contact-list li svg { width: 0.9rem; height: 0.9rem; flex-shrink: 0; opacity: 0.75; }
+
+    .r-contact-list a { color: rgba(255,255,255,0.82); text-decoration: none; }
+    .r-contact-list a:hover { color: #fff; text-decoration: underline; }
+
+    .r-photo {
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid rgba(255,255,255,0.25);
+      position: relative;
+      z-index: 1;
+      flex-shrink: 0;
+    }
+
+    /* ── Body ── */
+    .r-body {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+    }
+
+    /* ── Left column ── */
+    .r-left {
+      background: #f8fafc;
+      border-right: 1px solid #e2e8f0;
+      padding: 2.25rem 1.75rem;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    /* ── Right column ── */
+    .r-right {
+      padding: 2.25rem 2.25rem 2.25rem 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    /* ── Section ── */
+    .r-section-title {
+      font: 700 0.65rem Poppins, sans-serif;
+      letter-spacing: 0.18em;
+      color: #4f46e5;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid #e0e7ff;
+    }
+
+    /* Skills */
+    .skill-group { margin-bottom: 0.85rem; }
+    .skill-group:last-child { margin-bottom: 0; }
+
+    .skill-group-name {
+      font: 600 0.78rem Poppins, sans-serif;
+      color: #475569;
+      margin-bottom: 0.4rem;
+    }
+
+    .skill-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem;
+    }
+
+    .skill-tags span {
+      padding: 0.2rem 0.55rem;
+      background: #eef2ff;
+      border: 1px solid #c7d2fe;
+      border-radius: 20px;
+      font: 500 0.7rem Poppins, sans-serif;
+      color: #4338ca;
+    }
+
+    /* Languages */
+    .lang-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0.6rem;
+    }
+
+    .lang-item:last-child { margin-bottom: 0; }
+
+    .lang-name { font: 500 0.82rem Poppins, sans-serif; color: #334155; }
+    .lang-level { font: 400 0.72rem Poppins, sans-serif; color: #64748b; }
+
+    .lang-bar {
+      height: 4px;
+      background: #e2e8f0;
+      border-radius: 4px;
+      margin-top: 0.3rem;
+      overflow: hidden;
+    }
+
+    .lang-bar-fill {
+      height: 100%;
+      background: linear-gradient(90deg, #4f46e5, #818cf8);
+      border-radius: 4px;
+    }
+
+    /* Interests */
+    .interest-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
+
+    .interest-tags span {
+      padding: 0.25rem 0.65rem;
+      background: #fff;
+      border: 1px solid #e2e8f0;
+      border-radius: 20px;
+      font: 400 0.72rem Poppins, sans-serif;
+      color: #64748b;
+    }
+
+    /* Summary */
+    .r-summary {
+      font: 400 0.88rem/1.75 Poppins, sans-serif;
+      color: #475569;
+    }
+
+    /* Experience / Education items */
+    .r-item {
+      padding-left: 1rem;
+      border-left: 2px solid #e0e7ff;
+      margin-bottom: 1.5rem;
+      position: relative;
+    }
+
+    .r-item:last-child { margin-bottom: 0; }
+
+    .r-item::before {
+      content: '';
+      position: absolute;
+      left: -5px;
+      top: 5px;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #4f46e5;
+    }
+
+    .r-item-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .r-item-title {
+      font: 600 0.92rem Poppins, sans-serif;
+      color: #1e293b;
+    }
+
+    .r-item-date {
+      font: 500 0.72rem Poppins, sans-serif;
+      color: #fff;
+      background: #4f46e5;
+      padding: 0.2rem 0.6rem;
+      border-radius: 20px;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .r-item-sub {
+      margin-top: 0.2rem;
+      font: 500 0.78rem Poppins, sans-serif;
+      color: #6366f1;
+    }
+
+    .r-item-desc {
+      margin-top: 0.5rem;
+      font: 400 0.82rem/1.65 Poppins, sans-serif;
+      color: #64748b;
+    }
+
+    .r-item-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.3rem;
+      margin-top: 0.6rem;
+    }
+
+    .r-item-tags span {
+      padding: 0.15rem 0.5rem;
+      background: #f1f5f9;
+      border: 1px solid #e2e8f0;
+      border-radius: 4px;
+      font: 500 0.68rem Poppins, sans-serif;
+      color: #475569;
+    }
+
+    /* Projects */
+    .r-project {
+      padding: 0.85rem 1rem;
+      border: 1px solid #e2e8f0;
+      border-radius: 10px;
+      margin-bottom: 0.75rem;
+      background: #fafafa;
+    }
+
+    .r-project:last-child { margin-bottom: 0; }
+
+    .r-project-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .r-project-name {
+      font: 600 0.88rem Poppins, sans-serif;
+      color: #1e293b;
+    }
+
+    .r-project-link {
+      font: 500 0.72rem Poppins, sans-serif;
+      color: #4f46e5;
+      text-decoration: none;
+    }
+
+    .r-project-link:hover { text-decoration: underline; }
+
+    .r-project-desc {
+      margin-top: 0.35rem;
+      font: 400 0.78rem/1.6 Poppins, sans-serif;
+      color: #64748b;
+    }
+
+    .r-project-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.3rem;
+      margin-top: 0.5rem;
+    }
+
+    .r-project-tags span {
+      padding: 0.15rem 0.5rem;
+      background: #eef2ff;
+      border-radius: 4px;
+      font: 500 0.65rem Poppins, sans-serif;
+      color: #4338ca;
+    }
+
+    /* ── Print styles ── */
+    @media print {
+      body { background: #fff; padding: 0; }
+      .print-bar { display: none; }
+      .resume { box-shadow: none; border-radius: 0; max-width: 100%; }
+      .r-header { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      .r-item-date { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      .skill-tags span { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    }
+
+    @media (max-width: 680px) {
+      .r-header { grid-template-columns: 1fr; padding: 2rem 1.5rem; }
+      .r-photo { width: 80px; height: 80px; justify-self: start; }
+      .r-body { grid-template-columns: 1fr; }
+      .r-left { border-right: none; border-bottom: 1px solid #e2e8f0; padding: 1.75rem 1.5rem; }
+      .r-right { padding: 1.75rem 1.5rem; }
+      .print-bar { padding: 0 0.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="print-bar">
+    <a href="index.html">&larr; Back to Portfolio</a>
+    <button class="btn-print" onclick="window.print()">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+      Print / Save as PDF
+    </button>
+  </div>
+
+  <div class="resume">
+
+    <!-- HEADER -->
+    <div class="r-header">
+      <div>
+        <div class="r-name">Swikar Acharya</div>
+        <div class="r-title">Full-Stack Web Developer &amp; BCA Student</div>
+        <ul class="r-contact-list">
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            <a href="mailto:swikaracharya718@gmail.com">swikaracharya718@gmail.com</a>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.4 2 2 0 0 1 3.6 1.22h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.82a16 16 0 0 0 6.29 6.29l.96-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            +977 9842243576
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Kathmandu, Nepal
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+            <a href="https://swikaracharya718-lang.github.io/Portfolio-site" target="_blank">Portfolio</a>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.385-1.335-1.755-1.335-1.755-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12"/></svg>
+            <a href="https://github.com/swikaracharya718-lang" target="_blank">github.com/swikaracharya718-lang</a>
+          </li>
+        </ul>
+      </div>
+      <img src="image.jpg" alt="Swikar Acharya" class="r-photo">
+    </div>
+
+    <!-- BODY -->
+    <div class="r-body">
+
+      <!-- LEFT COLUMN -->
+      <div class="r-left">
+
+        <!-- Skills -->
+        <div>
+          <div class="r-section-title">Technical Skills</div>
+
+          <div class="skill-group">
+            <div class="skill-group-name">Frontend</div>
+            <div class="skill-tags">
+              <span>HTML5</span><span>CSS3</span><span>JavaScript</span>
+              <span>React</span><span>Tailwind CSS</span><span>Responsive Design</span>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <div class="skill-group-name">Backend</div>
+            <div class="skill-tags">
+              <span>Node.js</span><span>PHP</span><span>REST APIs</span>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <div class="skill-group-name">Database</div>
+            <div class="skill-tags">
+              <span>MySQL</span><span>SQL</span>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <div class="skill-group-name">Tools &amp; Others</div>
+            <div class="skill-tags">
+              <span>Git</span><span>GitHub</span><span>VS Code</span>
+              <span>XAMPP</span><span>Figma</span><span>Python</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Languages -->
+        <div>
+          <div class="r-section-title">Languages</div>
+
+          <div class="lang-item">
+            <div>
+              <div class="lang-name">Nepali</div>
+              <div class="lang-bar"><div class="lang-bar-fill" style="width:100%"></div></div>
+            </div>
+            <div class="lang-level">Native</div>
+          </div>
+
+          <div class="lang-item">
+            <div>
+              <div class="lang-name">English</div>
+              <div class="lang-bar"><div class="lang-bar-fill" style="width:82%"></div></div>
+            </div>
+            <div class="lang-level">Proficient</div>
+          </div>
+
+          <div class="lang-item">
+            <div>
+              <div class="lang-name">Hindi</div>
+              <div class="lang-bar"><div class="lang-bar-fill" style="width:70%"></div></div>
+            </div>
+            <div class="lang-level">Conversational</div>
+          </div>
+        </div>
+
+        <!-- Interests -->
+        <div>
+          <div class="r-section-title">Interests</div>
+          <div class="interest-tags">
+            <span>Web Development</span>
+            <span>Open Source</span>
+            <span>UI/UX Design</span>
+            <span>Problem Solving</span>
+            <span>Photography</span>
+            <span>Travelling</span>
+          </div>
+        </div>
+
+        <!-- Social -->
+        <div>
+          <div class="r-section-title">Social</div>
+          <div class="interest-tags">
+            <span>&#128247; instagram.com/swikaracharya17</span>
+            <span>&#128100; facebook.com/swikar.acharya2</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- RIGHT COLUMN -->
+      <div class="r-right">
+
+        <!-- Summary -->
+        <div>
+          <div class="r-section-title">Professional Summary</div>
+          <p class="r-summary">
+            Passionate and detail-oriented web developer currently pursuing a Bachelor of Computer Applications (BCA) at Tribhuvan University, Nepal. Experienced in building full-stack web applications using modern technologies including HTML, CSS, JavaScript, React, Node.js, PHP, and MySQL. I enjoy turning ideas into polished, functional products and am actively seeking freelance projects and internship opportunities to grow my skills and contribute to real-world solutions.
+          </p>
+        </div>
+
+        <!-- Education -->
+        <div>
+          <div class="r-section-title">Education</div>
+
+          <div class="r-item">
+            <div class="r-item-header">
+              <div class="r-item-title">Bachelor of Computer Applications (BCA)</div>
+              <span class="r-item-date">2022 — Present</span>
+            </div>
+            <div class="r-item-sub">Tribhuvan University, Nepal</div>
+            <div class="r-item-desc">
+              Studying core computer science subjects including Data Structures, Algorithms, Database Management, Web Technologies, Operating Systems, and Software Engineering.
+            </div>
+          </div>
+
+          <div class="r-item">
+            <div class="r-item-header">
+              <div class="r-item-title">+2 Science (Higher Secondary)</div>
+              <span class="r-item-date">2020 — 2022</span>
+            </div>
+            <div class="r-item-sub">Nepal</div>
+            <div class="r-item-desc">
+              Completed higher secondary education with a focus on Science and Mathematics.
+            </div>
+          </div>
+        </div>
+
+        <!-- Experience -->
+        <div>
+          <div class="r-section-title">Experience</div>
+
+          <div class="r-item">
+            <div class="r-item-header">
+              <div class="r-item-title">Freelance Web Developer</div>
+              <span class="r-item-date">2024 — Present</span>
+            </div>
+            <div class="r-item-sub">Self-employed, Remote</div>
+            <div class="r-item-desc">
+              Designing and developing responsive websites and web applications for clients. Handling full project lifecycle from requirement gathering to deployment. Building custom solutions using HTML, CSS, JavaScript, and PHP.
+            </div>
+            <div class="r-item-tags">
+              <span>HTML/CSS</span><span>JavaScript</span><span>PHP</span><span>MySQL</span><span>Git</span>
+            </div>
+          </div>
+
+          <div class="r-item">
+            <div class="r-item-header">
+              <div class="r-item-title">Personal Portfolio &amp; Open Source</div>
+              <span class="r-item-date">2023 — Present</span>
+            </div>
+            <div class="r-item-sub">GitHub — swikaracharya718-lang</div>
+            <div class="r-item-desc">
+              Actively building and maintaining personal projects on GitHub. Continuously learning new technologies and sharing progress publicly.
+            </div>
+          </div>
+        </div>
+
+        <!-- Projects -->
+        <div>
+          <div class="r-section-title">Projects</div>
+
+          <div class="r-project">
+            <div class="r-project-header">
+              <div class="r-project-name">Swad Nepal — Food Discovery Platform</div>
+              <a href="https://github.com/swikaracharya718-lang" target="_blank" class="r-project-link">GitHub &rarr;</a>
+            </div>
+            <div class="r-project-desc">
+              A full-stack food discovery platform built as a TU BCA project. Features restaurant listings, search &amp; filter, user reviews, and a complete admin panel for managing content.
+            </div>
+            <div class="r-project-tags">
+              <span>PHP</span><span>MySQL</span><span>HTML/CSS</span><span>JavaScript</span><span>XAMPP</span>
+            </div>
+          </div>
+
+          <div class="r-project">
+            <div class="r-project-header">
+              <div class="r-project-name">Personal Portfolio Website</div>
+              <a href="https://swikaracharya718-lang.github.io/Portfolio-site" target="_blank" class="r-project-link">Live &rarr;</a>
+            </div>
+            <div class="r-project-desc">
+              A fully responsive personal portfolio with dark/light mode, contact form (Formspree), skills ticker, project showcase, and separate About &amp; Contact pages. Deployed on GitHub Pages.
+            </div>
+            <div class="r-project-tags">
+              <span>HTML</span><span>CSS</span><span>JavaScript</span><span>GitHub Pages</span><span>Formspree</span>
+            </div>
+          </div>
+
+          <div class="r-project">
+            <div class="r-project-header">
+              <div class="r-project-name">JavaScript Calculator</div>
+            </div>
+            <div class="r-project-desc">
+              A clean, fully functional calculator built with vanilla JavaScript. Supports all basic arithmetic operations with a polished UI.
+            </div>
+            <div class="r-project-tags">
+              <span>HTML</span><span>CSS</span><span>JavaScript</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
