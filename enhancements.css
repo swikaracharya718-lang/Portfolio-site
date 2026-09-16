@@ -99,3 +99,11 @@ html[data-theme="dark"] .budget-input-wrap select option {
     background: #0f172a;
     color: #f8fafc;
 }
+
+.project-card-top.notes {
+    background: linear-gradient(135deg, #0f766e, #14b8a6);
+}
+
+.project-card-top.weather {
+    background: linear-gradient(135deg, #075985, #0ea5e9);
+}
