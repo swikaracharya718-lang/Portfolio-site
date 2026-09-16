@@ -107,3 +107,9 @@ html[data-theme="dark"] .budget-input-wrap select option {
 .project-card-top.weather {
     background: linear-gradient(135deg, #075985, #0ea5e9);
 }
+
+.project-card-top.swad {
+    background-image: linear-gradient(90deg, rgba(15, 54, 38, .86), rgba(15, 54, 38, .35)), url('https://www.worldhistory.org/img/c/p/2400x1254/12652.jpg');
+    background-position: center;
+    background-size: cover;
+}
