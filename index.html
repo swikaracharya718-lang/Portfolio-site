@@ -54,7 +54,7 @@
         <h1>Building useful things for the web.</h1>
         <p class="hero-copy">Hi, I&rsquo;m Swikar Acharya. I share practical notes, tutorials, and projects while learning modern web development.</p>
         <div class="hero-actions">
-          <a class="hero-primary" href="#" id="hireMeBtn">Hire Me</a>
+          <a class="hero-primary" href="contact.html">Hire Me</a>
           <a class="hero-secondary" href="#projects">View Projects <span aria-hidden="true">&rarr;</span></a>
         </div>
       </div>
@@ -198,8 +198,6 @@
     function openModal()  { modal.classList.add('is-open');  document.body.style.overflow = 'hidden'; }
     function closeModal() { modal.classList.remove('is-open'); document.body.style.overflow = ''; }
 
-    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
-    
     hireMeBtn.addEventListener('click', e => { e.preventDefault(); openModal(); });
     close.addEventListener('click', closeModal);
     modal.addEventListener('click', e => { if (e.target === modal) closeModal(); });
