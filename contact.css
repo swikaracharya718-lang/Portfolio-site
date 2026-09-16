@@ -183,13 +183,13 @@
 .contact-form {
   display: flex;
   flex-direction: column;
-  gap: 1.1rem;
+  gap: 1.5rem;
 }
 
 .cf-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 1rem;
+  gap: 1.25rem;
 }
 
 .cf-field {
@@ -199,18 +199,18 @@
 }
 
 .cf-field label {
-  font: 500 0.82rem Poppins, sans-serif;
+  font: 500 0.9rem Poppins, sans-serif;
   color: var(--text-muted);
 }
 
 .cf-field input,
 .cf-field textarea {
-  padding: 0.75rem 0.875rem;
+  padding: 1rem 1.1rem;
   border: 1px solid #e2e8f0;
   border-radius: 10px;
   background: var(--nav-bg);
   color: var(--text-primary);
-  font: 400 0.9rem Poppins, sans-serif;
+  font: 400 1rem Poppins, sans-serif;
   outline: none;
   resize: none;
   transition: border-color 0.2s ease, box-shadow 0.2s ease;
@@ -235,12 +235,12 @@ html[data-theme="dark"] .cf-field textarea:focus {
 
 .cf-submit {
   align-self: flex-start;
-  padding: 0.85rem 2rem;
+  padding: 1rem 2.5rem;
   background: #4f46e5;
   color: #fff;
   border: none;
   border-radius: 10px;
-  font: 600 0.95rem Poppins, sans-serif;
+  font: 600 1rem Poppins, sans-serif;
   cursor: pointer;
   transition: background 0.2s ease, transform 0.2s ease;
 }
