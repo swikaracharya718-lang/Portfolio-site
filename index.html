@@ -7,7 +7,12 @@
   <meta name="description" content="Personal website of Swikar Acharya.">
   <title>Swikar Acharya</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="about.css">
+  <link rel="stylesheet" href="neubrutalism.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.2/css/all.min.css">
 </head>
 
 <body>
@@ -20,16 +25,13 @@
 
       <ul class="nav-links">
         <li><a href="#home">Home</a></li>
-        <li><a href="about.html">About Me</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#experience">Experience</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="resume.html" target="_blank" rel="noopener">Resume</a></li>
+        <li><a href="#projects">Portfolio</a></li>
         <li><a href="#contact" class="contact-trigger">Contact</a></li>
       </ul>
 
       <div class="nav-actions">
-        <div class="search-container">
-          <input id="site-search" type="search" placeholder="Search..." aria-label="Search the site">
-        </div>
         <div class="nav-socials">
           <a href="https://www.facebook.com/swikar.acharya2" target="_blank" rel="noopener" aria-label="Facebook"
             class="social-icon fb">
@@ -61,7 +63,7 @@
           </svg></button>
         <a href="resume.html" class="signin" target="_blank">Resume</a>
         <a href="https://wa.me/9779842243576" target="_blank" rel="noopener" class="signup"
-          title="Chat with me on WhatsApp">Let's Talk &nbsp;&#128172;</a>
+          title="Chat with me on WhatsApp">Let's Talk</a>
       </div>
     </nav>
   </header>
@@ -70,12 +72,13 @@
     <section class="hero">
       <div class="hero-content">
         <p class="hero-eyebrow">DEVELOPER · LEARNER · CREATOR</p>
-        <h1>Building useful things for the web.</h1>
-        <p class="hero-copy">Hi, I&rsquo;m Swikar Acharya. I share practical notes, tutorials, and projects while
-          learning modern web development.</p>
+        <h1>Swikar Acharya</h1>
+        <p class="hero-copy">I&rsquo;m a student and web developer passionate about building responsive, useful
+          experiences for the web.</p>
         <div class="hero-actions">
-          <a class="hero-primary" href="#contact">Hire Me</a>
-          <a class="hero-secondary" href="#projects">View Projects <span aria-hidden="true">&rarr;</span></a>
+          <a class="hero-primary" href="#about">About Me <span aria-hidden="true">&rarr;</span></a>
+          <a class="hero-secondary" href="#projects">View Projects <span aria-hidden="true">&#9638;</span></a>
+          <a class="hero-secondary contact-trigger" href="#contact">Contact <span aria-hidden="true">&#9993;</span></a>
         </div>
       </div>
       <div class="hero-profile">
@@ -125,7 +128,7 @@
             <div class="project-mockup">
               <div class="mockup-bar"><span></span><span></span><span></span></div>
               <div class="mockup-content">
-                <div class="mockup-logo">&#127860;</div>
+                <div class="mockup-logo">SN</div>
                 <p class="mockup-title">Swad Nepal</p>
                 <p class="mockup-sub">Find your next local meal</p>
               </div>
@@ -162,7 +165,7 @@
           <div class="project-card-top notes">
             <div class="project-mockup">
               <div class="mockup-content">
-                <div class="mockup-logo">&#9776;</div>
+                <div class="mockup-logo">TB</div>
                 <p class="mockup-title">Task Board</p>
                 <p class="mockup-sub">Plan. Focus. Ship.</p>
               </div>
@@ -181,7 +184,7 @@
           <div class="project-card-top weather">
             <div class="project-mockup">
               <div class="mockup-content">
-                <div class="mockup-logo">&#9729;</div>
+                <div class="mockup-logo">WL</div>
                 <p class="mockup-title">Weather Lens</p>
                 <p class="mockup-sub">A calmer forecast view</p>
               </div>
@@ -197,6 +200,124 @@
         </article>
       </div>
     </section>
+
+    <div class="about-page" id="about">
+      <section class="about-hero" aria-labelledby="about-title">
+        <div class="about-hero-inner">
+          <p class="hero-eyebrow">DEVELOPER · LEARNER · CREATOR</p>
+          <h1 id="about-title">About Me</h1>
+          <p class="about-hero-sub">Get to know the person behind the code.</p>
+        </div>
+      </section>
+
+      <section class="about-main">
+        <div class="about-grid">
+          <aside class="about-sidebar">
+            <div class="about-badge"><span class="modal-status-dot"></span>Available for Work</div>
+            <div class="about-info-card">
+              <div class="about-info-row"><span>Kathmandu, Nepal</span></div>
+              <div class="about-info-row"><span>BCA Student &mdash; TU</span></div>
+              <div class="about-info-row"><span>Politician</span></div>
+              <div class="about-info-row"><span>Teacher &amp; Trainer</span></div>
+              <div class="about-info-row"><span>Good Communicator</span></div>
+              <div class="about-info-row"><span>Teacher at Sunsari Crystal Academy</span></div>
+              <div class="about-info-row"><span>Treasurer, Leo Club of Itahari</span></div>
+              <div class="about-info-row"><a href="mailto:swikaracharya718@gmail.com">swikaracharya718@gmail.com</a>
+              </div>
+              <div class="about-info-row"><a href="https://wa.me/9779842243576" target="_blank" rel="noopener">+977
+                  9842243576</a></div>
+            </div>
+            <div class="about-sidebar-actions">
+              <a href="resume.html" target="_blank" class="hero-primary">Download CV</a>
+              <a href="#contact" class="hero-secondary contact-trigger">Let's Talk</a>
+            </div>
+          </aside>
+
+          <div class="about-content">
+            <div class="about-bio">
+              <h2>Hey, I&rsquo;m Swikar</h2>
+              <p>I&rsquo;m a passionate web developer and BCA student at Tribhuvan University, Nepal. I love building
+                things for the web &mdash; from clean, responsive UIs to full-stack applications that solve real
+                problems.</p>
+              <p>I started coding out of curiosity and it quickly became my craft. I enjoy turning ideas into real,
+                working products that people can actually use. Whether it&rsquo;s a food discovery platform, a
+                calculator, or a personal portfolio &mdash; I care about every detail.</p>
+              <p>Beyond technology, I am a good communicator, trainer, and teacher at Sunsari Crystal Academy. I also
+                serve as Treasurer at Leo Club of Itahari and stay active professionally through leadership, teaching,
+                and community work.</p>
+            </div>
+
+            <div class="about-block">
+              <h3 class="about-block-title">Tech I Work With</h3>
+              <div class="about-skills-grid">
+                <div class="skill-item"><span class="skill-mark">HTML</span><span class="skill-name">HTML &amp;
+                    CSS</span></div>
+                <div class="skill-item"><span class="skill-mark">JS</span><span class="skill-name">JavaScript</span>
+                </div>
+                <div class="skill-item"><span class="skill-mark">R</span><span class="skill-name">React</span>
+                </div>
+                <div class="skill-item"><span class="skill-mark">N</span><span class="skill-name">Node.js</span>
+                </div>
+                <div class="skill-item"><span class="skill-mark">PY</span><span class="skill-name">Python</span>
+                </div>
+                <div class="skill-item"><span class="skill-mark">PHP</span><span class="skill-name">PHP</span>
+                </div>
+                <div class="skill-item"><span class="skill-mark">SQL</span><span class="skill-name">MySQL /
+                    SQL</span></div>
+                <div class="skill-item"><span class="skill-mark">GIT</span><span class="skill-name">Git &amp;
+                    GitHub</span></div>
+                <div class="skill-item"><span class="skill-mark">TW</span><span class="skill-name">Tailwind
+                    CSS</span></div>
+                <div class="skill-item"><span class="skill-mark">API</span><span class="skill-name">REST
+                    APIs</span></div>
+                <div class="skill-item"><span class="skill-mark">RWD</span><span class="skill-name">Responsive
+                    Design</span></div>
+                <div class="skill-item"><span class="skill-mark">UI</span><span class="skill-name">UI/UX
+                    Basics</span></div>
+              </div>
+            </div>
+
+            <div class="about-block">
+              <h3 class="about-block-title">My Journey</h3>
+              <div class="about-timeline">
+                <div class="timeline-item">
+                  <div class="timeline-dot"></div>
+                  <div class="timeline-body"><span class="timeline-year">2022</span>
+                    <h4>Started BCA at Tribhuvan University</h4>
+                    <p>Began my formal education in Computer Applications, diving deep into programming fundamentals and
+                      web technologies.</p>
+                  </div>
+                </div>
+                <div class="timeline-item">
+                  <div class="timeline-dot"></div>
+                  <div class="timeline-body"><span class="timeline-year">2023</span>
+                    <h4>Built First Full-Stack Project</h4>
+                    <p>Developed Swad Nepal &mdash; a PHP &amp; MySQL food discovery platform as a TU BCA project,
+                      featuring restaurant listings, search, reviews, and an admin panel.</p>
+                  </div>
+                </div>
+                <div class="timeline-item">
+                  <div class="timeline-dot"></div>
+                  <div class="timeline-body"><span class="timeline-year">2024</span>
+                    <h4>Expanded into Modern Web Dev</h4>
+                    <p>Learned React, Node.js, Tailwind CSS, and REST APIs. Started freelancing and building personal
+                      projects to sharpen my skills.</p>
+                  </div>
+                </div>
+                <div class="timeline-item timeline-item--active">
+                  <div class="timeline-dot"></div>
+                  <div class="timeline-body"><span class="timeline-year">Now</span>
+                    <h4>Open to Opportunities</h4>
+                    <p>Actively looking for freelance projects, collaborations, and internships. Building in public and
+                      sharing what I learn.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
 
   </main>
   <!-- Let's Talk Modal -->
@@ -225,10 +346,7 @@
           </a>
           <div class="modal-socials">
             <a href="https://wa.me/9779842243576" target="_blank" rel="noopener" class="modal-social-btn wa">
-              <svg viewBox="0 0 24 24" fill="currentColor">
-                <path
-                  d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z" />
-              </svg>
+              <i class="fa-brands fa-whatsapp"></i>
               WhatsApp
             </a>
             <a href="https://www.instagram.com/swikaracharya17/" target="_blank" rel="noopener"
@@ -294,10 +412,7 @@
           <button type="submit" class="modal-submit" id="submitBtn">Send Message <span
               aria-hidden="true">&rarr;</span></button>
           <a class="whatsapp-form-button" href="https://wa.me/9779842243576" target="_blank" rel="noopener">
-            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-              <path
-                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.198.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z" />
-            </svg>
+            <i class="fa-brands fa-whatsapp"></i>
             WhatsApp
           </a>
         </div>
@@ -306,10 +421,46 @@
     </div>
   </div>
 
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-brand">
+          <span class="code-icon">&lt;/&gt;</span>
+          <span>Swikar Acharya</span>
+        </a>
+        <p>Developer &middot; Learner &middot; Creator<br>Building useful things for the web.</p>
+      </div>
+      <div class="footer-links">
+        <span class="footer-links-title">Pages</span>
+        <a href="#home">Home</a>
+        <a href="#about">About Me</a>
+        <a href="#contact" class="contact-trigger">Contact</a>
+        <a href="resume.html" target="_blank">Resume</a>
+      </div>
+      <div class="footer-links">
+        <span class="footer-links-title">Connect</span>
+        <a href="mailto:swikaracharya718@gmail.com">Email Me</a>
+        <a href="https://wa.me/9779842243576" target="_blank" rel="noopener">WhatsApp</a>
+        <a href="https://www.instagram.com/swikaracharya17/" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.facebook.com/swikar.acharya2" target="_blank" rel="noopener">Facebook</a>
+        <a href="https://github.com/swikaracharya718-lang" target="_blank" rel="noopener">GitHub</a>
+      </div>
+      <div class="footer-cta">
+        <span class="footer-links-title">Available for Work</span>
+        <p>Have a project in mind? Let&rsquo;s build something great together.</p>
+        <a href="#contact" class="footer-cta-btn contact-trigger">Get In Touch &rarr;</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2025 Swikar Acharya. All rights reserved.</span>
+      <span>Based in Nepal</span>
+    </div>
+  </footer>
+
   <script src="theme.js"></script>
   <script>
     const modal = document.getElementById('contactModal');
-    const triggers = document.querySelectorAll('.contact-trigger, .hero-primary[href="#contact"]');
+    const triggers = document.querySelectorAll('.contact-trigger');
     const close = document.getElementById('modalClose');
     const form = document.getElementById('contactForm');
     const success = document.getElementById('modalSuccess');

@@ -1715,3 +1715,122 @@ html[data-theme="dark"] .about-page-quick { border-color: #374151; }
   .about-page-img-wrap { width: 120px; height: 120px; }
   .about-section-page { padding: 4rem 1.25rem; }
 }
+
+/* ── Site Footer ── */
+.site-footer {
+  background: #0f172a;
+  color: #94a3b8;
+  margin-top: auto;
+}
+
+.footer-inner {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 4rem 2rem 3rem;
+  display: grid;
+  grid-template-columns: 1.8fr 1fr 1fr 1.4fr;
+  gap: 3rem;
+  box-sizing: border-box;
+}
+
+.footer-brand .nav-brand {
+  color: #f8fafc;
+  font-size: 1.1rem;
+  margin-bottom: 0.85rem;
+  display: inline-flex;
+}
+
+.footer-brand .code-icon { color: #818cf8; }
+
+.footer-brand p {
+  margin: 0;
+  font: 400 0.85rem/1.7 Poppins, sans-serif;
+  color: #64748b;
+  max-width: 22ch;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.footer-links-title {
+  font: 600 0.7rem Poppins, sans-serif;
+  letter-spacing: 0.14em;
+  color: #f8fafc;
+  text-transform: uppercase;
+  margin-bottom: 0.4rem;
+}
+
+.footer-links a {
+  font: 400 0.85rem Poppins, sans-serif;
+  color: #64748b;
+  text-decoration: none;
+  transition: color 0.2s ease;
+  width: fit-content;
+}
+
+.footer-links a:hover { color: #a5b4fc; }
+
+.footer-cta p {
+  margin: 0.5rem 0 1rem;
+  font: 400 0.85rem/1.6 Poppins, sans-serif;
+  color: #64748b;
+}
+
+.footer-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.6rem 1.25rem;
+  background: #4f46e5;
+  color: #fff;
+  border-radius: 8px;
+  font: 600 0.82rem Poppins, sans-serif;
+  text-decoration: none;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.footer-cta-btn:hover { background: #4338ca; transform: translateY(-1px); }
+
+.footer-bottom {
+  border-top: 1px solid #1e293b;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 1.25rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  font: 400 0.78rem Poppins, sans-serif;
+  color: #334155;
+  box-sizing: border-box;
+}
+
+@media (max-width: 860px) {
+  .footer-inner {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+  .footer-brand { grid-column: span 2; }
+}
+
+@media (max-width: 560px) {
+  .footer-inner {
+    grid-template-columns: 1fr;
+    padding: 3rem 1.25rem 2rem;
+  }
+  .footer-brand { grid-column: span 1; }
+  .footer-bottom { padding: 1rem 1.25rem; flex-direction: column; text-align: center; gap: 0.4rem; }
+}
+
+/* ── Font Awesome brand icon sizing ── */
+.modal-social-btn .fa-brands,
+.whatsapp-form-button .fa-brands,
+.ci-soc .fa-brands {
+  font-size: 1.1rem;
+  line-height: 1;
+}
+
+.whatsapp-form-button .fa-brands { font-size: 1.2rem; }

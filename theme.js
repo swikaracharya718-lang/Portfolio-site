@@ -7,12 +7,18 @@ if (!document.querySelector('link[href="enhancements.css"]')) {
   const enhancements = document.createElement('link');
   enhancements.rel = 'stylesheet';
   enhancements.href = 'enhancements.css';
-  document.head.appendChild(enhancements);
+  const portfolioStyles = document.querySelector('link[href="neubrutalism.css"]');
+  document.head.insertBefore(enhancements, portfolioStyles || null);
 }
 
 function setTheme(theme) {
   document.documentElement.dataset.theme = theme;
   localStorage.setItem('theme', theme);
+
+  const neubrutalismStyles = document.querySelector('link[href="neubrutalism.css"]');
+  if (neubrutalismStyles) {
+    neubrutalismStyles.disabled = theme === 'dark';
+  }
 
   if (themeToggle) {
     const isDark = theme === 'dark';

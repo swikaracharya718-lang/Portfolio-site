@@ -425,6 +425,22 @@ html[data-theme="dark"] .cf-field label {
   min-width: 0;
 }
 
+.budget-type-select {
+  width: 100%;
+  padding: 0.9rem 1rem;
+  border: 2px solid var(--text-primary);
+  border-radius: 0;
+  background: var(--page-bg);
+  color: var(--text-primary);
+  font: 400 0.95rem Poppins, sans-serif;
+}
+
+.budget-type-select:focus {
+  outline: none;
+  border-color: #3157ff;
+  box-shadow: 3px 3px 0 #3157ff;
+}
+
 html[data-theme="dark"] .budget-input-wrap {
   border-color: #2d3748;
   background: #0d1117;
@@ -639,4 +655,215 @@ html[data-theme="dark"] .contact-cta-email svg {
     max-width: 100%;
     font-size: 0.88rem;
   }
+}
+
+/* Form actions row */
+.form-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 0.25rem;
+}
+
+.form-actions .cf-submit {
+  flex: 1;
+  width: auto;
+}
+
+.whatsapp-form-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 1rem 1.25rem;
+  background: #25d366;
+  color: #fff;
+  border-radius: 10px;
+  font: 600 0.95rem Poppins, sans-serif;
+  text-decoration: none;
+  transition: background 0.2s ease, transform 0.2s ease;
+  white-space: nowrap;
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.3);
+}
+
+.whatsapp-form-button svg {
+  width: 1.1rem;
+  height: 1.1rem;
+  flex-shrink: 0;
+}
+
+.whatsapp-form-button:hover {
+  background: #1da851;
+  transform: translateY(-2px);
+}
+
+/* Neubrutalist contact styling, using blue rather than the site's yellow accent. */
+.ci-badge {
+  padding: 0.45rem 0.75rem;
+  background: #eaf0ff;
+  border: 2px solid var(--text-primary);
+  border-radius: 0;
+  box-shadow: 3px 3px 0 var(--text-primary);
+  color: #3157ff;
+}
+
+.ci-card {
+  border: 2px solid var(--text-primary);
+  border-radius: 0;
+  box-shadow: 4px 4px 0 var(--text-primary);
+}
+
+.ci-card:hover {
+  border-color: #3157ff;
+  box-shadow: 6px 6px 0 #3157ff;
+  transform: translate(-2px, -2px);
+}
+
+.ci-card--loc:hover {
+  border-color: var(--text-primary);
+  box-shadow: 4px 4px 0 var(--text-primary);
+  transform: none;
+}
+
+.ci-card-icon {
+  border-radius: 0;
+  background: #eaf0ff;
+}
+
+.ci-card-icon svg {
+  color: #3157ff;
+}
+
+.ci-card-arrow {
+  color: #3157ff;
+}
+
+.ci-soc {
+  border: 2px solid var(--text-primary);
+  border-radius: 0;
+  box-shadow: 3px 3px 0 var(--text-primary);
+}
+
+.ci-soc:hover {
+  background: #3157ff;
+  border-color: var(--text-primary);
+  box-shadow: 4px 4px 0 var(--text-primary);
+  color: #fff;
+  transform: translate(-1px, -1px);
+}
+
+.cf-panel {
+  border: 2px solid var(--text-primary);
+  border-radius: 0;
+  box-shadow: 6px 6px 0 var(--text-primary);
+}
+
+.cf-field input,
+.cf-field textarea {
+  border: 2px solid var(--text-primary);
+  border-radius: 0;
+}
+
+.cf-field input:focus,
+.cf-field textarea:focus {
+  border-color: #3157ff;
+  box-shadow: 3px 3px 0 #3157ff;
+}
+
+.budget-input-wrap {
+  border: 2px solid var(--text-primary);
+  border-radius: 0;
+}
+
+.budget-input-wrap:focus-within {
+  border-color: #3157ff;
+  box-shadow: 3px 3px 0 #3157ff;
+}
+
+.cf-submit,
+.whatsapp-form-button {
+  border: 2px solid var(--text-primary);
+  border-radius: 0;
+  box-shadow: 4px 4px 0 var(--text-primary);
+}
+
+.cf-submit {
+  background: #3157ff;
+}
+
+.cf-submit:hover {
+  background: #2446e8;
+  box-shadow: 6px 6px 0 var(--text-primary);
+  transform: translate(-2px, -2px);
+}
+
+.whatsapp-form-button:hover {
+  box-shadow: 6px 6px 0 var(--text-primary);
+  transform: translate(-2px, -2px);
+}
+
+.contact-cta {
+  background: #eaf0ff;
+  border-top: 2px solid var(--text-primary);
+  border-bottom: 2px solid var(--text-primary);
+}
+
+.contact-cta h2 span,
+.contact-cta-email svg {
+  color: #3157ff;
+}
+
+.contact-cta-email {
+  padding: 0.9rem 1rem;
+  border: 2px solid var(--text-primary);
+  box-shadow: 4px 4px 0 var(--text-primary);
+}
+
+html[data-theme="dark"] .ci-badge,
+html[data-theme="dark"] .ci-card-icon {
+  background: #17254b;
+}
+
+html[data-theme="dark"] .cf-panel {
+  background: var(--nav-bg);
+  border-color: var(--text-primary);
+  box-shadow: 6px 6px 0 #000;
+}
+
+html[data-theme="dark"] .contact-cta {
+  background: #131a2d;
+  border-color: var(--text-primary);
+}
+
+html[data-theme="dark"] .ci-card {
+  border-color: var(--text-primary);
+  background: var(--nav-bg);
+  box-shadow: 4px 4px 0 #000;
+}
+
+html[data-theme="dark"] .ci-card:hover {
+  border-color: #3157ff;
+  box-shadow: 6px 6px 0 #3157ff;
+}
+
+html[data-theme="dark"] .ci-card--loc:hover {
+  border-color: var(--text-primary);
+  box-shadow: 4px 4px 0 #000;
+}
+
+html[data-theme="dark"] .ci-soc {
+  border-color: var(--text-primary);
+  box-shadow: 3px 3px 0 #000;
+}
+
+html[data-theme="dark"] .ci-soc:hover {
+  border-color: var(--text-primary);
+  box-shadow: 4px 4px 0 #000;
+}
+
+html[data-theme="dark"] .cf-field input:focus,
+html[data-theme="dark"] .cf-field textarea:focus,
+html[data-theme="dark"] .budget-input-wrap:focus-within {
+  border-color: #3157ff;
+  box-shadow: 3px 3px 0 #3157ff;
 }
