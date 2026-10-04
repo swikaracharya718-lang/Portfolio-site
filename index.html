@@ -207,6 +207,7 @@
             <div class="about-info-card">
               <div class="about-info-row"><span>Kathmandu, Nepal</span></div>
               <div class="about-info-row"><span>BCA Student &mdash; TU</span></div>
+              <div class="about-info-row"><span>Full-Stack Developer</span></div>
               <div class="about-info-row"><span>Politician</span></div>
               <div class="about-info-row"><span>Teacher &amp; Trainer</span></div>
               <div class="about-info-row"><span>Good Communicator</span></div>
@@ -327,11 +328,11 @@
           <section class="resume-block">
             <h3>Technical Skills</h3>
             <h4>Frontend</h4>
-            <p class="resume-tags"><span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>React</span><span>Tailwind CSS</span><span>Responsive Design</span></p>
+            <p class="resume-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>React</span></p>
             <h4>Backend &amp; Data</h4>
-            <p class="resume-tags"><span>Node.js</span><span>PHP</span><span>REST APIs</span><span>MySQL</span><span>SQL</span></p>
+            <p class="resume-tags"><span>PHP</span><span>Node.js</span><span>REST APIs</span><span>MySQL</span></p>
             <h4>Tools</h4>
-            <p class="resume-tags"><span>Git</span><span>GitHub</span><span>VS Code</span><span>XAMPP</span><span>Figma</span><span>Python</span></p>
+            <p class="resume-tags"><span>Git</span><span>GitHub</span><span>VS Code</span><span>Figma</span></p>
           </section>
           <section class="resume-block">
             <h3>Languages</h3>
@@ -341,16 +342,12 @@
               <li><span>Hindi</span><span>Conversational</span></li>
             </ul>
           </section>
-          <section class="resume-block">
-            <h3>Interests</h3>
-            <p class="resume-tags"><span>Web Development</span><span>Open Source</span><span>UI/UX</span><span>Problem Solving</span><span>Photography</span><span>Travelling</span></p>
-          </section>
         </aside>
 
         <div class="resume-main">
           <section class="resume-block">
             <h3>Professional Summary</h3>
-            <p class="resume-summary">Web developer and Bachelor of Computer Applications student at Tribhuvan University, Nepal. I build responsive websites and full-stack applications using HTML, CSS, JavaScript, React, Node.js, PHP, and MySQL. I enjoy turning ideas into polished, useful products and am open to freelance projects and internship opportunities.</p>
+            <p class="resume-summary">BCA student and web developer building responsive websites and full-stack projects with JavaScript, PHP, and MySQL.</p>
           </section>
 
           <section class="resume-block">
@@ -358,12 +355,10 @@
             <article class="resume-entry">
               <div class="resume-entry-heading"><h4>Bachelor of Computer Applications (BCA)</h4><span>2022 — Present</span></div>
               <p class="resume-entry-sub">Tribhuvan University, Nepal</p>
-              <p>Studying Data Structures, Algorithms, Database Management, Web Technologies, Operating Systems, and Software Engineering.</p>
             </article>
             <article class="resume-entry">
               <div class="resume-entry-heading"><h4>+2 Science (Higher Secondary)</h4><span>2020 — 2022</span></div>
               <p class="resume-entry-sub">Nepal</p>
-              <p>Completed higher secondary education with a focus on Science and Mathematics.</p>
             </article>
           </section>
 
@@ -372,12 +367,7 @@
             <article class="resume-entry">
               <div class="resume-entry-heading"><h4>Freelance Web Developer</h4><span>2024 — Present</span></div>
               <p class="resume-entry-sub">Self-employed · Remote</p>
-              <p>Designing and developing responsive websites and web applications, from gathering requirements through implementation, using HTML, CSS, JavaScript, and PHP.</p>
-            </article>
-            <article class="resume-entry">
-              <div class="resume-entry-heading"><h4>Personal Portfolio &amp; Open Source</h4><span>2023 — Present</span></div>
-              <p class="resume-entry-sub">GitHub · swikaracharya718-lang</p>
-              <p>Building and maintaining personal projects while continuously learning new technologies and sharing progress publicly.</p>
+              <p>Build responsive websites and web applications using HTML, CSS, JavaScript, PHP, and MySQL.</p>
             </article>
           </section>
 
@@ -385,17 +375,17 @@
             <h3>Selected Projects</h3>
             <article class="resume-project">
               <div class="resume-entry-heading"><h4>Swad Nepal — Food Discovery Platform</h4><a href="https://github.com/swikaracharya718-lang/Swad-Nepal-original" target="_blank" rel="noopener">Source code ↗</a></div>
-              <p>A full-stack food discovery platform with restaurant listings, search and filters, user reviews, and an admin panel.</p>
+              <p>Food discovery with restaurant search, reviews, and admin tools.</p>
               <p class="resume-project-tags">PHP · MySQL · HTML/CSS · JavaScript · XAMPP</p>
             </article>
             <article class="resume-project">
-              <div class="resume-entry-heading"><h4>Personal Portfolio Website</h4><a href="https://swikaracharya718-lang.github.io/Portfolio-site" target="_blank" rel="noopener">Live site ↗</a></div>
-              <p>A responsive portfolio featuring dark/light mode, a contact form, skills ticker, project showcase, and About section.</p>
+              <div class="resume-entry-heading"><h4>Personal Portfolio Website</h4><a href="https://swikaracharya.com.np/" target="_blank" rel="noopener">Live site ↗</a></div>
+              <p>Responsive portfolio with theme switching, contact form, and project demos.</p>
               <p class="resume-project-tags">HTML · CSS · JavaScript · GitHub Pages</p>
             </article>
             <article class="resume-project">
               <div class="resume-entry-heading"><h4>JavaScript Calculator</h4></div>
-              <p>A calculator built with vanilla JavaScript for common arithmetic operations.</p>
+              <p>Keyboard-ready calculator for everyday arithmetic.</p>
               <p class="resume-project-tags">HTML · CSS · JavaScript</p>
             </article>
           </section>
@@ -509,6 +499,7 @@
       </form>
     </div>
   </div>
+  </section>
 
   <footer class="site-footer">
     <div class="footer-inner">
@@ -636,6 +627,17 @@
     let anchorNavigationActive = false;
     let anchorNavigationTimer;
 
+    function updateAnchorOffset() {
+      const headerHeight = siteHeader.getBoundingClientRect().height;
+      document.documentElement.style.setProperty('--anchor-offset', `${Math.ceil(headerHeight + 12)}px`);
+    }
+
+    updateAnchorOffset();
+    if ('ResizeObserver' in window) {
+      new ResizeObserver(updateAnchorOffset).observe(siteHeader);
+    }
+    window.addEventListener('resize', updateAnchorOffset, { passive: true });
+
     function finishAnchorNavigation() {
       anchorNavigationActive = false;
       window.clearTimeout(anchorNavigationTimer);
@@ -645,11 +647,14 @@
     document.addEventListener('click', event => {
       const anchor = event.target.closest('a[href^="#"]');
       if (!anchor || !mobileViewport.matches || reducedMotion) return;
+      const targetId = decodeURIComponent(anchor.hash.slice(1));
+      if (!document.getElementById(targetId)) return;
+
       anchorNavigationActive = true;
       siteHeader.classList.remove('mobile-nav-hidden');
       window.clearTimeout(anchorNavigationTimer);
       anchorNavigationTimer = window.setTimeout(finishAnchorNavigation, 1800);
-    }, true);
+    });
 
     window.addEventListener('scrollend', finishAnchorNavigation, { passive: true });
 

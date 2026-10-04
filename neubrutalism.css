@@ -28,7 +28,7 @@ html[data-theme="dark"] {
 
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 7rem;
+    scroll-padding-top: var(--anchor-offset, 5.5rem);
 }
 
 body {
@@ -545,7 +545,13 @@ html[data-theme="dark"] .project-link {
 
 .about-page {
     min-height: 0;
-    scroll-margin-top: 8rem;
+    scroll-margin-top: 0;
+}
+
+#projects,
+#resume,
+#contact {
+    scroll-margin-top: 0;
 }
 
 .about-main {
@@ -1094,7 +1100,7 @@ html[data-theme="dark"] .timeline-year {
 }
 
 .resume-section {
-    scroll-margin-top: 9rem;
+    scroll-margin-top: 0;
     padding: 5.5rem clamp(1.25rem, 5vw, 4rem);
     background: var(--page-bg);
 }
@@ -1257,7 +1263,7 @@ html[data-theme="dark"] .timeline-year {
 .resume-project-tags { font-weight: 700 !important; }
 
 .contact-section-page {
-    scroll-margin-top: 9rem;
+    scroll-margin-top: 0;
     padding: 5.5rem clamp(1.25rem, 5vw, 4rem) 6rem;
     background: var(--page-bg);
     border-top: 3px solid var(--neo-ink);
@@ -1474,10 +1480,6 @@ html[data-theme="dark"] .timeline-year {
 }
 
 @media (max-width: 700px) {
-    html {
-        scroll-padding-top: 9rem;
-    }
-
     header {
         transition: transform .24s ease;
         will-change: transform;
@@ -1724,10 +1726,6 @@ html[data-theme="dark"] .timeline-year {
 }
 
 /* About section refinements */
-.about-page {
-    scroll-margin-top: 12rem;
-}
-
 .about-hero {
     max-width: 1240px;
     margin: 0 auto;
@@ -1917,10 +1915,6 @@ html[data-theme="dark"] .about-info-row a {
 }
 
 @media (max-width: 540px) {
-    .about-page {
-        scroll-margin-top: 13rem;
-    }
-
     .about-hero {
         padding: 3rem 1.1rem .5rem;
     }
