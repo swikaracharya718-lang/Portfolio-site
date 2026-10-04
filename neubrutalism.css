@@ -850,6 +850,22 @@ html[data-theme="dark"] .timeline-year {
     color: var(--text-primary);
 }
 
+.footer-skills-ticker {
+    margin-top: 0;
+    padding-block: .85rem;
+    border: 0;
+    border-bottom: 3px solid var(--neo-ink);
+    background: var(--neo-yellow);
+}
+
+.footer-skills-ticker .skills-track {
+    color: #171717;
+}
+
+.footer-skills-ticker .ticker-dot {
+    color: var(--neo-blue);
+}
+
 .site-footer .nav-brand {
     color: #171717;
 }
