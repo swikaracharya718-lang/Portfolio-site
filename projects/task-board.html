@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f1e3">
+  <title>Task Board | Swikar Acharya</title>
+  <link rel="stylesheet" href="demo.css">
+  <link rel="stylesheet" href="task-board.css">
+  <script src="demo.js" defer></script>
+  <script src="task-board.js" defer></script>
+</head>
+<body>
+  <main class="demo-shell">
+    <header class="demo-topbar">
+      <a class="demo-brand" href="../index.html#projects">SA / PROJECTS</a>
+      <nav class="demo-actions" aria-label="Project navigation">
+        <a class="demo-link-button" href="../index.html#projects">Back to portfolio</a>
+        <button class="demo-button" type="button" data-theme-toggle aria-pressed="false">Dark mode</button>
+      </nav>
+    </header>
+    <section class="demo-heading">
+      <p class="demo-eyebrow">INTERACTIVE PROJECT / 02</p>
+      <h1>Task Board</h1>
+      <p>A calm, straightforward place to capture the next thing you need to do. Your tasks stay in this browser.</p>
+    </section>
+    <section class="demo-panel" aria-labelledby="tasks-title">
+      <h2 id="tasks-title">Your list</h2>
+      <form class="task-form" id="task-form">
+        <div class="demo-field">
+          <label for="task-input">Add a task</label>
+          <input class="demo-input" id="task-input" name="task" maxlength="120" autocomplete="off"
+            placeholder="What needs doing?" required>
+        </div>
+        <button class="demo-button primary" type="submit">Add task</button>
+      </form>
+      <div class="task-toolbar">
+        <p id="task-count" class="demo-muted" aria-live="polite"></p>
+        <div class="task-filters" role="group" aria-label="Filter tasks">
+          <button class="demo-button filter-button" type="button" data-filter="all" aria-pressed="true">All</button>
+          <button class="demo-button filter-button" type="button" data-filter="active" aria-pressed="false">To do</button>
+          <button class="demo-button filter-button" type="button" data-filter="done" aria-pressed="false">Done</button>
+        </div>
+      </div>
+      <p class="demo-status" id="task-status" role="status"></p>
+      <ul class="task-list" id="task-list" aria-label="Tasks"></ul>
+      <div class="task-empty" id="task-empty">
+        <strong>Your next win starts here.</strong>
+        <span>Add a task above and it will appear in your list.</span>
+      </div>
+    </section>
+    <p class="demo-footer">Task data is saved locally in this browser and is not sent to a server.</p>
+  </main>
+</body>
+</html>

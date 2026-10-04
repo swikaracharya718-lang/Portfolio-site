@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f1e3">
+  <title>Quick Calculator | Swikar Acharya</title>
+  <link rel="stylesheet" href="demo.css">
+  <link rel="stylesheet" href="calculator.css">
+  <script src="demo.js" defer></script>
+  <script src="calculator.js" defer></script>
+</head>
+<body>
+  <main class="demo-shell">
+    <header class="demo-topbar">
+      <a class="demo-brand" href="../index.html#projects">SA / PROJECTS</a>
+      <nav class="demo-actions" aria-label="Project navigation">
+        <a class="demo-link-button" href="../index.html#projects">Back to portfolio</a>
+        <button class="demo-button" type="button" data-theme-toggle aria-pressed="false">Dark mode</button>
+      </nav>
+    </header>
+    <section class="demo-heading">
+      <p class="demo-eyebrow">INTERACTIVE PROJECT / 01</p>
+      <h1>Quick Calculator</h1>
+      <p>A simple four-function calculator for quick everyday totals. Use the buttons or your keyboard.</p>
+    </section>
+    <section class="demo-panel calculator-panel" aria-label="Calculator">
+      <output class="calculator-display" id="display" aria-live="polite">0</output>
+      <div class="calculator-keys" id="keys">
+        <button class="demo-button key utility" type="button" data-action="clear">AC</button>
+        <button class="demo-button key utility" type="button" data-action="sign" aria-label="Change sign">+/−</button>
+        <button class="demo-button key utility" type="button" data-action="percent">%</button>
+        <button class="demo-button key operator" type="button" data-operator="÷" aria-label="Divide">÷</button>
+        <button class="demo-button key" type="button" data-digit="7">7</button>
+        <button class="demo-button key" type="button" data-digit="8">8</button>
+        <button class="demo-button key" type="button" data-digit="9">9</button>
+        <button class="demo-button key operator" type="button" data-operator="×" aria-label="Multiply">×</button>
+        <button class="demo-button key" type="button" data-digit="4">4</button>
+        <button class="demo-button key" type="button" data-digit="5">5</button>
+        <button class="demo-button key" type="button" data-digit="6">6</button>
+        <button class="demo-button key operator" type="button" data-operator="−" aria-label="Subtract">−</button>
+        <button class="demo-button key" type="button" data-digit="1">1</button>
+        <button class="demo-button key" type="button" data-digit="2">2</button>
+        <button class="demo-button key" type="button" data-digit="3">3</button>
+        <button class="demo-button key operator" type="button" data-operator="+" aria-label="Add">+</button>
+        <button class="demo-button key zero" type="button" data-digit="0">0</button>
+        <button class="demo-button key" type="button" data-action="decimal">.</button>
+        <button class="demo-button key equals" type="button" data-action="equals" aria-label="Equals">=</button>
+      </div>
+      <p class="demo-status" id="calc-status" role="status"></p>
+    </section>
+    <p class="demo-footer">Calculations stay in this browser. No account or data upload required.</p>
+  </main>
+</body>
+</html>

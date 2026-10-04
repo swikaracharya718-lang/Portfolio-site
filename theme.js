@@ -13,11 +13,10 @@ if (!document.querySelector('link[href="enhancements.css"]')) {
 
 function setTheme(theme) {
   document.documentElement.dataset.theme = theme;
-  localStorage.setItem('theme', theme);
-
-  const neubrutalismStyles = document.querySelector('link[href="neubrutalism.css"]');
-  if (neubrutalismStyles) {
-    neubrutalismStyles.disabled = theme === 'dark';
+  try {
+    localStorage.setItem('theme', theme);
+  } catch (error) {
+    console.error('Could not save the theme preference.', error);
   }
 
   if (themeToggle) {
@@ -28,7 +27,12 @@ function setTheme(theme) {
   }
 }
 
-const savedTheme = localStorage.getItem('theme');
+let savedTheme;
+try {
+  savedTheme = localStorage.getItem('theme');
+} catch (error) {
+  console.error('Could not read the saved theme preference.', error);
+}
 const preferredTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
 setTheme(savedTheme || preferredTheme);
 

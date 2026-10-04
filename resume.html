@@ -379,6 +379,147 @@
       .r-right { padding: 1.75rem 1.5rem; }
       .print-bar { padding: 0 0.5rem; }
     }
+
+    :root {
+      --resume-ink: #213541;
+      --resume-muted: #596a74;
+      --resume-line: #dce5e8;
+      --resume-accent: #26766f;
+      --resume-accent-soft: #e8f2f0;
+    }
+
+    body {
+      background: #edf1f2;
+      color: var(--resume-ink);
+      padding: 2.5rem 1.25rem;
+    }
+
+    .print-bar { max-width: 960px; margin-bottom: 1rem; }
+
+    .print-bar a,
+    .r-project-link { color: var(--resume-accent); }
+
+    .btn-print {
+      background: var(--resume-ink);
+      border-radius: 5px;
+    }
+
+    .btn-print:hover { background: var(--resume-accent); }
+
+    .resume {
+      max-width: 960px;
+      border: 1px solid var(--resume-line);
+      border-radius: 8px;
+      box-shadow: 0 16px 48px rgba(33, 53, 65, .12);
+    }
+
+    .r-header {
+      background: var(--resume-ink);
+      border-bottom: 5px solid var(--resume-accent);
+      padding: 2.5rem 2.75rem;
+    }
+
+    .r-name { font-size: 2.25rem; letter-spacing: -.045em; }
+    .r-title { color: #b9d5d1; }
+    .r-contact-list { column-gap: 1.2rem; row-gap: .65rem; }
+    .r-contact-list li { font-size: .76rem; }
+    .r-photo {
+      width: 112px;
+      height: 132px;
+      border: 2px solid rgba(255, 255, 255, .35);
+      border-radius: 5px;
+    }
+
+    .r-body { grid-template-columns: minmax(230px, .78fr) minmax(0, 2fr); }
+
+    .r-left {
+      background: #f5f8f8;
+      border-right-color: var(--resume-line);
+    }
+
+    .r-left,
+    .r-right { gap: 1.8rem; }
+
+    .r-section-title {
+      color: var(--resume-accent);
+      font-size: .68rem;
+      letter-spacing: .14em;
+      border-bottom: 1px solid var(--resume-line);
+    }
+
+    .skill-group-name,
+    .lang-name,
+    .r-item-title,
+    .r-project-name { color: var(--resume-ink); }
+
+    .skill-tags span,
+    .r-project-tags span {
+      background: var(--resume-accent-soft);
+      border: 1px solid #d5e6e2;
+      border-radius: 3px;
+      color: #315d59;
+    }
+
+    .lang-bar { display: none; }
+    .lang-name { font-size: .8rem; }
+    .lang-level { color: var(--resume-muted); }
+
+    .interest-tags span,
+    .interest-tags a {
+      padding: .25rem .55rem;
+      background: #fff;
+      border: 1px solid var(--resume-line);
+      border-radius: 3px;
+      color: var(--resume-muted);
+      font: 400 .7rem Poppins, sans-serif;
+      text-decoration: none;
+    }
+
+    .interest-tags a:hover { color: var(--resume-accent); border-color: var(--resume-accent); }
+    .r-summary { color: #40535e; }
+    .r-item { border-left-color: #c9dedb; }
+    .r-item::before { background: var(--resume-accent); }
+
+    .r-item-date {
+      background: var(--resume-accent-soft);
+      color: #315d59;
+      border-radius: 3px;
+    }
+
+    .r-item-sub { color: var(--resume-accent); }
+    .r-item-desc,
+    .r-project-desc { color: var(--resume-muted); }
+
+    .r-project {
+      padding: .9rem 0;
+      border: 0;
+      border-top: 1px solid var(--resume-line);
+      border-radius: 0;
+      background: transparent;
+    }
+
+    .r-project-header { align-items: baseline; }
+    .r-project-link { white-space: nowrap; }
+
+    @media print {
+      @page { size: A4; margin: 12mm; }
+      body { background: #fff; padding: 0; }
+      .resume { border: 0; box-shadow: none; }
+      .r-header { border-bottom-color: var(--resume-accent); }
+      .r-item,
+      .r-project { break-inside: avoid; }
+    }
+
+    @media (max-width: 680px) {
+      body { padding: 1rem .75rem; }
+      .r-header { padding: 1.75rem 1.25rem; }
+      .r-photo { width: 80px; height: 96px; }
+      .r-body { grid-template-columns: 1fr; }
+      .r-contact-list { flex-direction: column; }
+      .r-left,
+      .r-right { padding: 1.5rem 1.25rem; }
+      .r-project-header { align-items: flex-start; flex-direction: column; }
+    }
   </style>
 </head>
 <body>
@@ -511,8 +652,8 @@
         <div>
           <div class="r-section-title">Social</div>
           <div class="interest-tags">
-            <span>&#128247; instagram.com/swikaracharya17</span>
-            <span>&#128100; facebook.com/swikar.acharya2</span>
+            <a href="https://www.instagram.com/swikaracharya17/" target="_blank" rel="noopener">Instagram</a>
+            <a href="https://www.facebook.com/swikar.acharya2" target="_blank" rel="noopener">Facebook</a>
           </div>
         </div>
 
@@ -593,7 +734,7 @@
           <div class="r-project">
             <div class="r-project-header">
               <div class="r-project-name">Swad Nepal — Food Discovery Platform</div>
-              <a href="https://github.com/swikaracharya718-lang" target="_blank" class="r-project-link">GitHub &rarr;</a>
+              <a href="http://localhost/swad-nepal/" target="_blank" rel="noopener" class="r-project-link">Local demo &rarr;</a>
             </div>
             <div class="r-project-desc">
               A full-stack food discovery platform built as a TU BCA project. Features restaurant listings, search &amp; filter, user reviews, and a complete admin panel for managing content.

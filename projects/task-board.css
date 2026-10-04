@@ -1,0 +1,21 @@
+.task-form { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: end; gap: .75rem; }
+.task-toolbar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .8rem; margin-top: 1.4rem; }
+.task-toolbar p { margin: 0; font-size: .9rem; }
+.task-filters { display: flex; flex-wrap: wrap; gap: .45rem; }
+.demo-button.filter-button { min-height: 40px; padding: .45rem .7rem; font-size: .85rem; }
+.demo-button.filter-button[aria-pressed="true"] { background: var(--demo-accent); }
+.task-list { display: grid; gap: .65rem; margin: .8rem 0 0; padding: 0; list-style: none; }
+.task-item { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: center; gap: .8rem; padding: .85rem; border: var(--demo-border); }
+.task-checkbox { width: 22px; height: 22px; accent-color: var(--demo-blue); }
+.task-text { overflow-wrap: anywhere; line-height: 1.45; }
+.task-item.is-done .task-text { color: var(--demo-muted); text-decoration: line-through; }
+.demo-button.delete-task { min-height: 40px; padding: .45rem .65rem; font-size: .85rem; }
+.task-empty { display: grid; gap: .35rem; margin-top: .8rem; padding: 1.5rem; border: 2px dashed var(--demo-muted); color: var(--demo-muted); text-align: center; }
+.task-empty[hidden], .task-item[hidden] { display: none; }
+
+@media (max-width: 520px) {
+  .task-form { grid-template-columns: minmax(0, 1fr); }
+  .task-form > button { width: 100%; }
+  .task-item { grid-template-columns: auto minmax(0, 1fr); }
+  .task-item .delete-task { grid-column: 2; justify-self: start; }
+}

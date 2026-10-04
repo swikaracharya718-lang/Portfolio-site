@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f1e3">
+  <title>Weather Lens | Swikar Acharya</title>
+  <link rel="stylesheet" href="demo.css">
+  <link rel="stylesheet" href="weather-lens.css">
+  <script src="demo.js" defer></script>
+  <script src="weather-lens.js" defer></script>
+</head>
+<body>
+  <main class="demo-shell">
+    <header class="demo-topbar">
+      <a class="demo-brand" href="../index.html#projects">SA / PROJECTS</a>
+      <nav class="demo-actions" aria-label="Project navigation">
+        <a class="demo-link-button" href="../index.html#projects">Back to portfolio</a>
+        <button class="demo-button" type="button" data-theme-toggle aria-pressed="false">Dark mode</button>
+      </nav>
+    </header>
+    <section class="demo-heading">
+      <p class="demo-eyebrow">INTERACTIVE PROJECT / 03</p>
+      <h1>Weather Lens</h1>
+      <p>Look up a place for current conditions and a clear three-day forecast, with temperatures in Celsius. Weather data is provided by Open-Meteo.</p>
+    </section>
+    <section class="demo-panel" aria-labelledby="weather-title">
+      <h2 id="weather-title">Check a location</h2>
+      <form class="weather-form" id="weather-form">
+        <div class="demo-field">
+          <label for="place">City or place</label>
+          <input class="demo-input" id="place" name="place" maxlength="80" autocomplete="off"
+            placeholder="For example, Kathmandu" required>
+        </div>
+        <button class="demo-button primary" type="submit">Get forecast</button>
+      </form>
+      <p class="demo-status" id="weather-status" role="status" aria-live="polite"></p>
+      <div id="weather-result" class="weather-result" hidden>
+        <div class="weather-current" id="weather-current"></div>
+        <h3>Next three days</h3>
+        <div class="weather-days" id="weather-days"></div>
+      </div>
+    </section>
+    <p class="demo-footer">This feature needs an internet connection. Weather lookup uses the Open-Meteo public API.</p>
+  </main>
+</body>
+</html>
