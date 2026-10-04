@@ -17,5 +17,5 @@
 .demo-button.key { min-width: 0; min-height: 58px; padding: .5rem; font-size: 1.15rem; }
 .demo-button.key.utility { background: color-mix(in srgb, var(--demo-ink) 10%, var(--demo-paper)); }
 .demo-button.key.operator { background: var(--demo-blue); color: #fff; }
-.demo-button.key.equals { grid-column: span 2; background: var(--demo-accent); }
+.demo-button.key.equals { background: var(--demo-accent); }
 .demo-button.key.zero { grid-column: span 2; }

@@ -844,9 +844,10 @@ html[data-theme="dark"] .timeline-year {
 }
 
 .site-footer {
-    background: var(--neo-ink);
+    margin-top: clamp(2.5rem, 6vw, 4.5rem);
+    background: var(--neo-paper);
     border-top: 4px solid var(--neo-yellow);
-    color: var(--page-bg);
+    color: var(--text-primary);
 }
 
 .site-footer .nav-brand {
@@ -856,27 +857,27 @@ html[data-theme="dark"] .timeline-year {
 .footer-brand p,
 .footer-cta p,
 .footer-bottom {
-    color: var(--page-bg);
+    color: var(--text-muted);
 }
 
 .footer-links-title {
-    color: var(--neo-yellow);
+    color: var(--neo-blue);
     font-family: "Space Grotesk", sans-serif;
 }
 
 .footer-links a {
-    color: var(--page-bg);
+    color: var(--text-primary);
 }
 
 .footer-links a:hover {
-    color: var(--neo-yellow);
+    color: var(--neo-blue);
 }
 
 .footer-cta-btn {
     background: var(--neo-yellow);
-    border: 2px solid var(--page-bg);
+    border: 2px solid var(--neo-ink);
     border-radius: 0;
-    box-shadow: 3px 3px 0 var(--page-bg);
+    box-shadow: 3px 3px 0 var(--neo-shadow-color);
     color: #171717;
 }
 

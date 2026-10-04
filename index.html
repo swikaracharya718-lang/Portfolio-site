@@ -6,6 +6,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Personal website of Swikar Acharya.">
   <title>Swikar Acharya</title>
+  <link rel="canonical" href="https://swikaracharya.com.np/">
+  <script>
+    if (window.location.pathname.toLowerCase() === '/index.html') {
+      window.history.replaceState(null, '', `/${window.location.search}${window.location.hash}`);
+    }
+  </script>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="about.css">
   <link rel="stylesheet" href="neubrutalism.css">
@@ -18,7 +24,7 @@
 <body>
   <header>
     <nav class="dev-navbar" aria-label="Primary navigation">
-      <a href="index.html" class="nav-brand" aria-label="Swikar Acharya home">
+      <a href="/" class="nav-brand" aria-label="Swikar Acharya home">
         <span class="code-icon" aria-hidden="true">&lt;/&gt;</span>
         <span>Swikar Acharya</span>
       </a>
@@ -143,55 +149,42 @@
 
         <article class="project-card">
           <div class="project-card-top calc">
-            <div class="calc-preview">
-              <div class="calc-screen">1,250</div>
-              <div class="calc-keys"><span>AC</span><span class="k-op">/</span><span class="k-op">&times;</span><span
-                  class="k-accent">=</span><span class="k-wide">7 8 9</span></div>
-            </div>
+            <img class="project-preview-image" src="assets/calculator-project.jpg"
+              alt="Calculator and notes on a desk, previewing the quick calculator project" loading="lazy">
           </div>
           <div class="project-card-body">
             <div class="project-tags"><span>JavaScript</span><span>Accessible UI</span></div>
             <h3>Quick Calculator</h3>
             <p>Handle everyday addition, subtraction, multiplication, and division with mouse or keyboard.</p>
-            <div class="project-card-footer"><a class="project-link" href="projects/calculator.html">Open calculator &rarr;</a>
+            <div class="project-card-footer"><a class="project-link" href="/projects/calculator/">Open calculator &rarr;</a>
             </div>
           </div>
         </article>
 
         <article class="project-card">
           <div class="project-card-top notes">
-            <div class="project-mockup">
-              <div class="mockup-content">
-                <div class="mockup-logo">TB</div>
-                <p class="mockup-title">Task Board</p>
-                <p class="mockup-sub">Plan. Focus. Ship.</p>
-              </div>
-            </div>
+            <img class="project-preview-image" src="assets/task-board-project.jpg"
+              alt="Notebook and pen on a desk, previewing the task board project" loading="lazy">
           </div>
           <div class="project-card-body">
             <div class="project-tags"><span>JavaScript</span><span>Local Storage</span></div>
             <h3>Task Board</h3>
             <p>Capture tasks, mark progress, and keep a simple personal work board saved on this device.</p>
-            <div class="project-card-footer"><a class="project-link" href="projects/task-board.html">Open task board &rarr;</a>
+            <div class="project-card-footer"><a class="project-link" href="/projects/task-board/">Open task board &rarr;</a>
             </div>
           </div>
         </article>
 
         <article class="project-card">
           <div class="project-card-top weather">
-            <div class="project-mockup">
-              <div class="mockup-content">
-                <div class="mockup-logo">WL</div>
-                <p class="mockup-title">Weather Lens</p>
-                <p class="mockup-sub">A calmer forecast view</p>
-              </div>
-            </div>
+            <img class="project-preview-image" src="assets/weather-lens-project.jpg"
+              alt="Clouds over a landscape, previewing the Weather Lens forecast project" loading="lazy">
           </div>
           <div class="project-card-body">
             <div class="project-tags"><span>REST API</span><span>Responsive</span></div>
             <h3>Weather Lens</h3>
             <p>Search a place to see current conditions and a concise multi-day forecast.</p>
-            <div class="project-card-footer"><a class="project-link" href="projects/weather-lens.html">Open Weather Lens &rarr;</a>
+            <div class="project-card-footer"><a class="project-link" href="/projects/weather-lens/">Open Weather Lens &rarr;</a>
             </div>
           </div>
         </article>
@@ -520,7 +513,7 @@
   <footer class="site-footer">
     <div class="footer-inner">
       <div class="footer-brand">
-        <a href="index.html" class="nav-brand">
+        <a href="/" class="nav-brand">
           <span class="code-icon">&lt;/&gt;</span>
           <span>Swikar Acharya</span>
         </a>

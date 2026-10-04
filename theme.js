@@ -33,8 +33,7 @@ try {
 } catch (error) {
   console.error('Could not read the saved theme preference.', error);
 }
-const preferredTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-setTheme(savedTheme || preferredTheme);
+setTheme(savedTheme === 'dark' ? 'dark' : 'light');
 
 themeToggle?.addEventListener('click', () => {
   setTheme(document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark');
