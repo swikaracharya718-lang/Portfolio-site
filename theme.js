@@ -39,6 +39,34 @@ themeToggle?.addEventListener('click', () => {
   setTheme(document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark');
 });
 
+const navbar = document.querySelector('.dev-navbar');
+const menuToggle = navbar?.querySelector('.nav-menu-toggle');
+
+function closeNavigationMenu() {
+  if (!navbar || !menuToggle) return;
+  navbar.classList.remove('is-menu-open');
+  menuToggle.setAttribute('aria-expanded', 'false');
+  menuToggle.setAttribute('aria-label', 'Open navigation menu');
+}
+
+menuToggle?.addEventListener('click', () => {
+  const isOpen = menuToggle.getAttribute('aria-expanded') === 'true';
+  navbar.classList.toggle('is-menu-open', !isOpen);
+  menuToggle.setAttribute('aria-expanded', String(!isOpen));
+  menuToggle.setAttribute('aria-label', isOpen ? 'Open navigation menu' : 'Close navigation menu');
+});
+
+navbar?.querySelectorAll('.nav-links a, .nav-actions a').forEach(link => {
+  link.addEventListener('click', closeNavigationMenu);
+});
+
+document.addEventListener('keydown', event => {
+  if (event.key === 'Escape' && menuToggle?.getAttribute('aria-expanded') === 'true') {
+    closeNavigationMenu();
+    menuToggle.focus();
+  }
+});
+
 if (!document.querySelector('.floating-whatsapp')) {
   const whatsapp = document.createElement('a');
   whatsapp.className = 'floating-whatsapp';

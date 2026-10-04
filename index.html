@@ -28,8 +28,12 @@
         <span class="code-icon" aria-hidden="true">&lt;/&gt;</span>
         <span>Swikar Acharya</span>
       </a>
+      <button class="nav-menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false"
+        aria-controls="primary-navigation-links">
+        <span></span><span></span><span></span>
+      </button>
 
-      <ul class="nav-links">
+      <ul class="nav-links" id="primary-navigation-links">
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#resume">Resume</a></li>
@@ -67,7 +71,6 @@
             viewBox="0 0 24 24" aria-hidden="true">
             <path d="M20.4 15.2A8.5 8.5 0 0 1 8.8 3.6 8.5 8.5 0 1 0 20.4 15.2Z"></path>
           </svg></button>
-        <a href="#resume" class="signin">Resume</a>
         <a href="https://wa.me/9779842243576" target="_blank" rel="noopener" class="signup"
           title="Chat with me on WhatsApp">Let's Talk</a>
       </div>
@@ -449,7 +452,7 @@
         </div>
       </div>
 
-      <form class="modal-form" id="contactForm" action="https://formspree.io/f/maenwplw" method="POST" novalidate>
+      <form class="modal-form" id="contactForm" action="https://formspree.io/f/maenwplw" method="POST">
         <div class="modal-row">
           <div class="modal-field">
             <label for="cf-name">Your Name <span class="req">*</span></label>
@@ -466,7 +469,11 @@
             <input type="tel" id="cf-phone" name="phone" placeholder="+977 98XXXXXXXX" required>
           </div>
           <div class="modal-field">
-            <label for="cf-budget">Budget <span class="req">*</span></label>
+            <label for="cf-budget-mode">Budget <span class="req">*</span></label>
+            <select class="budget-type-select" id="cf-budget-mode" name="budget_type" required>
+              <option value="fixed">Fixed amount</option>
+              <option value="negotiable">Negotiable / not fixed</option>
+            </select>
             <div class="budget-input-wrap">
               <select id="cf-currency" name="currency" aria-label="Currency">
                 <option value="$">$ USD</option>
@@ -570,32 +577,48 @@
   <script>
     const form = document.getElementById('contactForm');
     const success = document.getElementById('modalSuccess');
-
     const submitBtn = document.getElementById('submitBtn');
+    const budgetMode = document.getElementById('cf-budget-mode');
+    const budgetInput = document.getElementById('cf-budget');
+
+    const syncBudgetRequirement = () => {
+      const isFixed = budgetMode.value === 'fixed';
+      budgetInput.required = isFixed;
+      budgetInput.placeholder = isFixed ? 'Enter amount' : 'Optional amount';
+    };
+
+    budgetMode.addEventListener('change', syncBudgetRequirement);
+    syncBudgetRequirement();
 
     form.addEventListener('submit', async e => {
       e.preventDefault();
       submitBtn.disabled = true;
       submitBtn.textContent = 'Sending...';
 
-      const data = new FormData(form);
-      const response = await fetch(form.action, {
-        method: 'POST',
-        body: data,
-        headers: { 'Accept': 'application/json' }
-      });
+      try {
+        const response = await fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { 'Accept': 'application/json' }
+        });
 
-      if (response.ok) {
+        if (!response.ok) {
+          throw new Error(`Form submission failed with status ${response.status}.`);
+        }
+
         success.style.color = '#16a34a';
         success.textContent = '\u2713 Message sent! I\'ll get back to you soon.';
         form.reset();
-      } else {
+        syncBudgetRequirement();
+      } catch (error) {
+        console.error('Could not submit the contact form.', error);
         success.style.color = '#dc2626';
         success.textContent = 'Something went wrong. Please try WhatsApp or email directly.';
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = 'Send Message <span aria-hidden="true">&rarr;</span>';
       }
 
-      submitBtn.disabled = false;
-      submitBtn.innerHTML = 'Send Message <span aria-hidden="true">&rarr;</span>';
       setTimeout(() => { success.textContent = ''; }, 6000);
     });
 

@@ -19,9 +19,14 @@
         <span class="code-icon" aria-hidden="true">&lt;/&gt;</span>
         <span>Swikar Acharya</span>
       </a>
-      <ul class="nav-links">
+      <button class="nav-menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false"
+        aria-controls="primary-navigation-links">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="primary-navigation-links">
         <li><a href="/">Home</a></li>
         <li><a href="about.html">About Me</a></li>
+        <li><a href="resume.html">Resume</a></li>
         <li><a href="/#projects">Projects</a></li>
         <li><a href="contact.html" class="nav-active">Contact</a></li>
       </ul>
@@ -59,7 +64,6 @@
             <path d="M20.4 15.2A8.5 8.5 0 0 1 8.8 3.6 8.5 8.5 0 1 0 20.4 15.2Z"></path>
           </svg>
         </button>
-        <a href="resume.html" class="signin" target="_blank">Resume</a>
         <a href="https://wa.me/9779842243576" target="_blank" rel="noopener" class="signup"
           title="Chat with me on WhatsApp">Let's Talk &nbsp;&#128172;</a>
       </div>
@@ -317,23 +321,28 @@
       submitBtn.disabled = true;
       submitBtn.textContent = 'Sending...';
 
-      const res = await fetch(form.action, {
-        method: 'POST',
-        body: new FormData(form),
-        headers: { 'Accept': 'application/json' }
-      });
-
-      if (res.ok) {
+      try {
+        const res = await fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { 'Accept': 'application/json' }
+        });
+        if (!res.ok) {
+          throw new Error(`Form submission failed with status ${res.status}.`);
+        }
         success.style.color = '#16a34a';
         success.textContent = '\u2713 Message sent! I\'ll get back to you soon.';
         form.reset();
-      } else {
+        syncBudgetRequirement();
+      } catch (error) {
+        console.error('Could not submit the contact form.', error);
         success.style.color = '#dc2626';
         success.textContent = 'Something went wrong. Please try WhatsApp or email directly.';
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = 'Send Message <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2 11 13"/><path d="M22 2 15 22 11 13 2 9l20-7z"/></svg>';
       }
 
-      submitBtn.disabled = false;
-      submitBtn.innerHTML = 'Send Message <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2 11 13"/><path d="M22 2 15 22 11 13 2 9l20-7z"/></svg>';
       setTimeout(() => { success.textContent = ''; }, 6000);
     });
   </script>
